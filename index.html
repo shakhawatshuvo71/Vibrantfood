@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibrantFood</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+<header>
+  <img src="./photos/Logo.png" class="logo">
+  
+  <a class="order-btn" href="Menu.html" target="_blank">
+    <img src="./photos/menu2.jpg">View Menu
+  </a>
+</header>
+
+<section class="hero">
+  <div class="overlay">
+    <div class="brand-text">VIBRANT</div>
+    <h1>Too Halal For Food</h1>
+    <p>Modern • Beautiful • Youthful</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Newly Arrived</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="./photos/Newly.png">
+      <h3>Yum Chicken Roll</h3>
+      <button onclick="order()">Order</button>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <h2>Most Popular</h2>
+  <div class="cards">
+    <div class="card big">
+      <img src="./photos/Popular 1.png">
+      <h3>BBQ Cheesy Bite Burger</h3>
+      <button onclick="order()">Order</button>
+    </div>
+    <div class="card">
+      <img src="./photos/Popular 2.png">
+      <h3>Chicken Mini Shingara 
+(5p)</h3>
+      <button onclick="order()">Order</button>
+    </div>
+    <div class="card">
+      <img src="photos/Popular 3.png">
+      <h3>Premium Overloaded Meatbox </h3>
+      <button onclick="order()">Order</button>
+    </div>
+    <div class="card">
+      <img src="photos/Popular 4.png">
+      <h3>Crispy Wings (4p)</h3>
+      <button onclick="order()">Order</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Our Food Menu</h2>
+  <button class="menu-btn" onclick="openMenu()">View Menu</button>
+</section>
+
+<div id="menuModal" class="modal">
+  <div class="menu-box">
+    <button class="back-btn" onclick="closeMenu()">← Back</button>
+    <img src="./photos/menu.jpg" alt="Vibrant Menu">
+  </div>
+</div>
+
+
+<section class="section dark">
+  <h2>Order Online From</h2>
+  <div class="platforms">
+    <a href="https://www.foodpanda.com.bd/restaurant/rjoi/vibrant-food" target="_blank"><img src="./photos/Foodpanda.png" alt="FoodPanda"></a>
+    <a href="https://foodibd.com/" target="_blank"><img src="./photos/Foodi.webp" alt="Foodi"></a>
+  </div>
+</section>
+
+<section class="map">
+  <iframe src="https://www.google.com/maps?q=Dr%20Akter%20Hamid%20Khan%20Road%20Comilla&output=embed"></iframe>
+</section>
+
+<footer>
+   <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="./photos/Logo.png" alt="Logo">
+        <p>&copy;2026 Vibrant Food. Trademarks and brands are the property of their respective owners.</p>
+      </div>
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+
+      <p>📍 Dr Akter Hamid Khan Road, Comilla</p>
+  <p>⏰ 4:00 PM – 10:30 PM</p>
+  <p>📞 01795711270</p>
+  <p>📧 vibrantfoodcumilla@gmail.com</p>
+        </ul>
+      </div>
+      <div class="footer-column">
+       
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61566851101904" target="_blank"><img src="./photos/Facebook.png" alt="Facebook"></a>
+          <a href="https://www.facebook.com/share/g/14VTq8QY4qe/" target="_blank"><img src="./photos/Group.webp" alt="Facebook Group"></a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Design & Developed by <a href="https://www.facebook.com/BuildovaTech">Build.</a></p>
+    </div>
+  </footer>
+  
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+  </body>
+</html>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

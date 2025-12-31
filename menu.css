@@ -1,0 +1,219 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background:
+    radial-gradient(circle at top left, #1a1a1a, #0d0d0d 60%),
+    linear-gradient(135deg, #111111, #000000);
+  color: #f5f5f5;
+  padding: 20px;
+}
+
+/* =========================
+   HEADER / LOGO
+========================= */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* logo left */
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo-box {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  flex: 1; /* make it fill remaining space */
+  font-size: 32px;
+  color: #ffffff;
+}
+
+/* =========================
+   CATEGORY CARDS (RED)
+========================= */
+.categories {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(20,20,20,.95);
+  backdrop-filter: blur(8px);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 12px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+}
+
+.cat {
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#b31217,#e52d27);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(229,45,39,.6);
+  transition: .3s;
+}
+
+.cat.active {
+  border: 2px solid #ffcc00;
+  box-shadow: 0 0 20px rgba(255,204,0,.7);
+}
+
+.cat:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   ITEMS GRID
+========================= */
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+  gap: 22px;
+  animation: fade .5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* =========================
+   FOOD CARD (BLACK)
+========================= */
+.food-card {
+  background: linear-gradient(145deg,#121212,#1b1b1b);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0,0,0,.8);
+  transition: transform .35s ease, box-shadow .35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,.9);
+}
+
+/* Accent border by category */
+.burger   { border-top: 4px solid #ff6a00; }
+.meatbox  { border-top: 4px solid #d32f2f; }
+.wings    { border-top: 4px solid #f9a825; }
+.shawarma { border-top: 4px solid #8d6e63; }
+.subway   { border-top: 4px solid #2e7d32; }
+.sandwich { border-top: 4px solid #6d4c41; }
+.snacks   { border-top: 4px solid #ffca28; }
+.drink    { border-top: 4px solid #29b6f6; }
+
+/* =========================
+   FOOD CARD IMAGE
+========================= */
+.food-card .img-box {
+  width: 100%;
+  height: 150px;          /* fixed height for all images */
+  overflow: hidden;       /* hide overflow if image is bigger */
+}
+
+.food-card .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* keeps aspect ratio and crops nicely */
+  display: block;
+  transition: transform .4s ease;
+}
+
+.food-card:hover .img-box img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   CARD BODY
+========================= */
+.card-body {
+  padding: 14px;
+  text-align: center;
+  flex: 1;
+}
+
+.card-body h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.desc {
+  font-size: 13px;
+  color: #bdbdbd;
+  margin: 6px 0;
+}
+
+.price {
+  font-weight: 600;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#ff6a00,#ff8f00);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(255,106,0,.7);
+  transition: transform .3s;
+}
+
+.btn:hover {
+  opacity: .9;
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media(max-width:600px){
+  h1 { font-size: 24px; }
+
+  .logo-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .food-card .img-box { height: 120px; }
+}
